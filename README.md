@@ -1,3 +1,4 @@
 # mmrSim
-###By Benjamin Zhang (zenbhang)
+By Benjamin Zhang (zenbhang)
+
 ###What is mmrSim?
