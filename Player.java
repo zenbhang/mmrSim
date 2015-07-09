@@ -4,15 +4,19 @@
  * and open the template in the editor.
  */
 
-package mmrSim;
-
+import java.util.ArrayList;
 /**
  *
  * @author zenbhang
  */
 public class Player {
-    public int iGameMMR;
-    public int iRealMMR;
-    public String username;
+    public int iGameMMR; //mmr according to the game
+    public int iRealMMR;  //mmr in reality
+    public int iRoundJoined; //round player joined in
+    public int iGrowth; //growth overtime
+    public String str_username; //username if one
+    public ArrayList<Integer> match_history= new ArrayList<>(); //match history of player
+    public ArrayList<Integer> gain_history = new ArrayList<>(); //history of gains of player
+    
     
 }
