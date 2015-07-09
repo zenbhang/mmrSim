@@ -16,6 +16,9 @@ Ever played a video game that has a rank? Ever felt like you were matched up wit
 ###What is mmrSim?
 A simulator to determine the long term effects of a matchmaking rank algorithm.
 
+###Donate
+<script id='fbo0wog'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=zenbhang&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbo0wog');</script>
+
 
 ###Legal
 ![Creative Commons](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
@@ -24,3 +27,4 @@ MMRSIM by Benjamin Zhang is licensed under a Creative Commons Attribution-
 NonCommercial-ShareAlike 4.0 International License.
 
 Source at [https://github.com/zenbhang/mmrSim](https://github.com/zenbhang/mmrSim).
+
