@@ -17,9 +17,7 @@ Ever played a video game that has a rank? Ever felt like you were matched up wit
 A simulator to determine the long term effects of a matchmaking rank algorithm.
 
 ###Donate
-<a href="https://flattr.com/submit/auto?user_id=zenbhang&url=https%3A%2F%2Fflattr.com%2Fprofile%2Fzenbhang" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
-
-[!["Flattr me!"](//button.flattr.com/flattr-badge-large.png)](https://flattr.com/profile/zenbhang)
+<a href="https://flattr.com/submit/auto?user_id=zenbhang&url=https%3A%2F%2Fflattr.com%2Fprofile%2Fzenbhang" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr me!" border="0"></a>
 
 ###Legal
 ![Creative Commons](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
