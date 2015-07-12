@@ -11,7 +11,6 @@
  * @author zenbhang
  */
 import java.util.ArrayList;
-import java.util.Random;
 public class MmrSim {
 /**
  * @MMRSimulator
@@ -25,11 +24,11 @@ public class MmrSim {
     public int iGrowth_Min; //growth minimum bound
     public int iGrowth_Max; //growth max bound
     public int iMMR_Gain; //growth per win
-    public int iMMR_Loss; //growth per loss
+    public int iMMR_Loss; //growth per loss, + amount results in growth
     public int iPlayers_Per_Team; //Players per game's team
-    public int iStarting_mmr;
-    public int iMax_mmr;
-    public int iMin_mmr;
+    public int iStarting_mmr; //starting mmr
+    public int iMax_mmr; //max mmr
+    public int iMin_mmr; //min mmr
     public ArrayList<Player> playerDatabase = new ArrayList<>();
     
     public MmrSim(){
@@ -45,12 +44,6 @@ public class MmrSim {
         iStarting_mmr=100;
         iMax_mmr=300;
         iMin_mmr=10;
-        
-    }
-    
-    public static void main(String[] args) {
-        gui GUI = new gui();
-        GUI.setVisible(true);
         
     }
     

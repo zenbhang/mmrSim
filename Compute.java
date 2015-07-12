@@ -39,25 +39,17 @@ public class Compute {
     
     public ArrayList<Player> generateInitialPlayers(){
         ArrayList<Player> a = new ArrayList<>();
-        
         for (int i = 0; i<m.iNumber_of_Initial_Players;i++){
             a.add(generatePlayer(i,0));
         }
-        r.nextInt();
-        
-        
         return a;
         
     }
     public ArrayList<Player> generateWave(int wave){
         ArrayList<Player> a = new ArrayList<>();
-        
-        for (int i = 0; i<m.iNumber_of_Initial_Players;i++){
-            a.add(generatePlayer(i,wave));
-        }
-        r.nextInt();
-        
-        
+        for (int i = 0; i<m.iNumber_of_added_Players_per_Round;i++){ //for loop
+            a.add(generatePlayer(i,wave)); //adds a player
+        }        
         return a;
     }
     public Player generatePlayer(int i, int wave){
