@@ -9,12 +9,18 @@
  * @author zenbhang
  */
 public class gui extends javax.swing.JFrame {
-    
     public MmrSim m= new MmrSim();
+    public Settings s;
     /**
      * Creates new form gui
      */
     public gui() {
+        m=new MmrSim();
+        s=new Settings();
+        //start of the save workaround
+        s.setVisible(false);
+        s.dispose();
+        //end of save workaround
         initComponents();
     }
 
@@ -117,12 +123,16 @@ public class gui extends javax.swing.JFrame {
         //Start button, starts the Simulator
         
     }//GEN-LAST:event_btnStartActionPerformed
-
+ 
     private void btn_SettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SettingsActionPerformed
         //Settings button, opens the settings dialog
-        Settings s=new Settings();
+        
     }//GEN-LAST:event_btn_SettingsActionPerformed
 
+    //save workaround
+    public void saveSettings(){
+        
+    }
     private void btn_ViewPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ViewPlayersActionPerformed
         //View Players button, opens the player viewer.
     }//GEN-LAST:event_btn_ViewPlayersActionPerformed
