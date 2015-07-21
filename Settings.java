@@ -10,12 +10,13 @@
  */
 public class Settings extends javax.swing.JDialog {
     
-    public gui g = new gui();
+    
     /**
      * Creates new form Settings
      */
-    public Settings() {
-        
+    public MmrSim m;
+    public Settings(MmrSim input) {
+        m=input;
         initComponents();
                 /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -137,6 +138,11 @@ public class Settings extends javax.swing.JDialog {
         });
 
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -298,17 +304,17 @@ public class Settings extends javax.swing.JDialog {
 
     private void btnApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApplyActionPerformed
         //apply
-        g.m.iNumber_of_Rounds =Integer.parseInt( txtRounds.getText());
-        g.m.iNumber_of_Initial_Players = Integer.parseInt( txtInitialPlayers.getText());
-        g.m.iNumber_of_added_Players_per_Round=Integer.parseInt( txtPlayersAddedPerRound.getText());
-        g.m.iGrowth_Min=Integer.parseInt(txtPlayerGrowthMax.getText());
-        g.m.iGrowth_Max=Integer.parseInt(txtPlayerGrowthMin.getText());
-        g.m.iMMR_Gain=Integer.parseInt(txtMMRGain.getText());
-        g.m.iMMR_Loss=Integer.parseInt(txtMMRLoss.getText());
-        g.m.iPlayers_Per_Team=Integer.parseInt(txtPlayersPerTeam.getText());
-        g.m.iStarting_mmr=Integer.parseInt(txtStartMMR.getText());
-        g.m.iMax_mmr=Integer.parseInt(txtMaxMMR.getText());
-        g.m.iMin_mmr=Integer.parseInt(txtMinMMR.getText());        
+        m.iNumber_of_Rounds =Integer.parseInt( txtRounds.getText());
+        m.iNumber_of_Initial_Players = Integer.parseInt( txtInitialPlayers.getText());
+        m.iNumber_of_added_Players_per_Round=Integer.parseInt( txtPlayersAddedPerRound.getText());
+        m.iGrowth_Min=Integer.parseInt(txtPlayerGrowthMax.getText());
+        m.iGrowth_Max=Integer.parseInt(txtPlayerGrowthMin.getText());
+        m.iMMR_Gain=Integer.parseInt(txtMMRGain.getText());
+        m.iMMR_Loss=Integer.parseInt(txtMMRLoss.getText());
+        m.iPlayers_Per_Team=Integer.parseInt(txtPlayersPerTeam.getText());
+        m.iStarting_mmr=Integer.parseInt(txtStartMMR.getText());
+        m.iMax_mmr=Integer.parseInt(txtMaxMMR.getText());
+        m.iMin_mmr=Integer.parseInt(txtMinMMR.getText());        
         refreshPage();
     }//GEN-LAST:event_btnApplyActionPerformed
 
@@ -320,35 +326,56 @@ public class Settings extends javax.swing.JDialog {
 
     private void btnDefaultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDefaultActionPerformed
         //sets to default
-        g.m.iNumber_of_Rounds = 5;
-        g.m.iNumber_of_Initial_Players = 10;
-        g.m.iNumber_of_added_Players_per_Round=0;
-        g.m.iGrowth_Min=0;
-        g.m.iGrowth_Max=0;
-        g.m.iMMR_Gain=5;
-        g.m.iMMR_Loss=-5;
-        g.m.iPlayers_Per_Team=1;
-        g.m.iStarting_mmr=100;
-        g.m.iMax_mmr=300;
-        g.m.iMin_mmr=10;
+        m.iNumber_of_Rounds = 5;
+        m.iNumber_of_Initial_Players = 10;
+        m.iNumber_of_added_Players_per_Round=0;
+        m.iGrowth_Min=0;
+        m.iGrowth_Max=0;
+        m.iMMR_Gain=5;
+        m.iMMR_Loss=-5;
+        m.iPlayers_Per_Team=1;
+        m.iStarting_mmr=100;
+        m.iMax_mmr=300;
+        m.iMin_mmr=10;
         refreshPage();
      
     }//GEN-LAST:event_btnDefaultActionPerformed
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+         //apply
+        m.iNumber_of_Rounds =Integer.parseInt( txtRounds.getText());
+        m.iNumber_of_Initial_Players = Integer.parseInt( txtInitialPlayers.getText());
+        m.iNumber_of_added_Players_per_Round=Integer.parseInt( txtPlayersAddedPerRound.getText());
+        m.iGrowth_Min=Integer.parseInt(txtPlayerGrowthMax.getText());
+        m.iGrowth_Max=Integer.parseInt(txtPlayerGrowthMin.getText());
+        m.iMMR_Gain=Integer.parseInt(txtMMRGain.getText());
+        m.iMMR_Loss=Integer.parseInt(txtMMRLoss.getText());
+        m.iPlayers_Per_Team=Integer.parseInt(txtPlayersPerTeam.getText());
+        m.iStarting_mmr=Integer.parseInt(txtStartMMR.getText());
+        m.iMax_mmr=Integer.parseInt(txtMaxMMR.getText());
+        m.iMin_mmr=Integer.parseInt(txtMinMMR.getText());        
+        refreshPage();
+        //quit
+        super.setVisible(false);
+        dispose();
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
+
     private void refreshPage(){
          //MMR Settings
-        txtMMRGain.setText(""+g.m.iMMR_Gain);
-        txtMMRLoss.setText(""+g.m.iMMR_Loss);
-        txtStartMMR.setText(""+g.m.iStarting_mmr);
-        txtMaxMMR.setText(""+g.m.iMax_mmr);
-        txtMinMMR.setText(""+g.m.iMin_mmr);
-        txtPlayerGrowthMax.setText(""+g.m.iGrowth_Max);
-        txtPlayerGrowthMin.setText(""+g.m.iGrowth_Min);
+        txtMMRGain.setText(""+m.iMMR_Gain);
+        txtMMRLoss.setText(""+m.iMMR_Loss);
+        txtStartMMR.setText(""+m.iStarting_mmr);
+        txtMaxMMR.setText(""+m.iMax_mmr);
+        txtMinMMR.setText(""+m.iMin_mmr);
+        txtPlayerGrowthMax.setText(""+m.iGrowth_Max);
+        txtPlayerGrowthMin.setText(""+m.iGrowth_Min);
         //Matchmaking settings
-        txtRounds.setText(""+g.m.iNumber_of_Rounds);
-        txtInitialPlayers.setText(""+g.m.iNumber_of_Initial_Players);
-        txtPlayersAddedPerRound.setText(""+g.m.iNumber_of_added_Players_per_Round);
-        txtPlayersPerTeam.setText(""+g.m.iPlayers_Per_Team);
+        txtRounds.setText(""+m.iNumber_of_Rounds);
+        txtInitialPlayers.setText(""+m.iNumber_of_Initial_Players);
+        txtPlayersAddedPerRound.setText(""+m.iNumber_of_added_Players_per_Round);
+        txtPlayersPerTeam.setText(""+m.iPlayers_Per_Team);
     }
     /**
      * @param args the command line arguments

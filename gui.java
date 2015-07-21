@@ -9,14 +9,14 @@
  * @author zenbhang
  */
 public class gui extends javax.swing.JFrame {
-    public MmrSim m= new MmrSim();
+    public MmrSim m;
     public Settings s;
     /**
      * Creates new form gui
      */
     public gui() {
         m=new MmrSim();
-        s=new Settings();
+        s=new Settings(m);
         //start of the save workaround
         s.setVisible(false);
         s.dispose();
@@ -126,52 +126,19 @@ public class gui extends javax.swing.JFrame {
  
     private void btn_SettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SettingsActionPerformed
         //Settings button, opens the settings dialog
-        
+        s=new Settings(m);
+        s.setVisible(true);
     }//GEN-LAST:event_btn_SettingsActionPerformed
 
-    //save workaround
-    public void saveSettings(){
-        
-    }
     private void btn_ViewPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ViewPlayersActionPerformed
         //View Players button, opens the player viewer.
+        ViewPlayers v = new ViewPlayers();
+        v.setVisible(true);
     }//GEN-LAST:event_btn_ViewPlayersActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new gui().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnStart;
