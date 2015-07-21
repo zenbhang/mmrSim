@@ -11,10 +11,10 @@ o8o        o888o o8o        o888o o888o  o888o 8""88888P'  o888o o8o        o888
 MMR Simulator By Benjamin Zhang (zenbhang)
 
 ###Preface
-Ever played a video game that has a rank? Ever felt like you were matched up with absolutely incompetent and simple-minded teammates? Fear no more, mmrSim is here to show the long term effects of an algorithm.
+Ever played a video game that has a rank? Ever felt like you were matched up with absolutely incompetent and simple-minded teammates? Fear no more, mmrSim is here to show the long term effects of a matchmaking algorithm.
 
 ###What is mmrSim?
-A simulator to determine the long term effects of a matchmaking rank algorithm.
+A simulator to determine the long term effects of a matchmaking rank algorithm. It lets you set different variables and calculates matches made in the set matchmaking environment.
 
 ###Donate
 <a href="https://flattr.com/submit/auto?user_id=zenbhang&url=https%3A%2F%2Fflattr.com%2Fprofile%2Fzenbhang" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr me!" title="Flattr me!" border="0"></a>
